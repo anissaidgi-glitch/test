@@ -5,20 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inox Style – Bijoux en acier inoxydable</title>
   <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#f7f7f7; color:#222}
-    header {background:#111; color:#fff; padding:20px}
-    header h1 {margin:0}
-    nav a {color:#fff; margin-right:15px; text-decoration:none}
-    .container {max-width:1100px; margin:auto; padding:20px}
-    .products {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px}
-    .card {background:#fff; border-radius:8px; padding:15px; box-shadow:0 2px 6px rgba(0,0,0,.1)}
-    .card img {width:100%; border-radius:6px}
-    .price {font-weight:bold; margin:10px 0}
-    button {background:#111; color:#fff; border:none; padding:10px 15px; cursor:pointer; border-radius:5px}
-    footer {background:#111; color:#fff; text-align:center; padding:15px; margin-top:40px}
+    body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background: linear-gradient(to bottom, #ffe6f0, #ffffff); color:#333}
+    header {background:#ff66b2; color:#fff; padding:20px; position:sticky; top:0; z-index:1000; box-shadow:0 4px 6px rgba(0,0,0,0.1)}
+    header h1 {margin:0; display:inline-block; font-family: 'Georgia', serif; font-weight:bold;}
+    nav {display:inline-block; float:right}
+    nav a {color:#fff; margin-left:20px; text-decoration:none; font-weight:bold; transition:0.3s}
+    nav a:hover {color:#ffe6f0}
+
+    .container {max-width:1200px; margin:auto; padding:20px}
+
+    .carousel {position:relative; overflow:hidden; margin-bottom:30px; border-radius:15px}
+    .slides {display:flex; transition:transform 0.5s ease-in-out}
+    .slides img {width:100%; border-radius:15px; filter: brightness(0.95);}
+    .carousel-btn {position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,102,178,0.7); color:#fff; border:none; padding:12px; cursor:pointer; border-radius:50%; font-size:1.2em; transition:0.3s}
+    .carousel-btn:hover {background:rgba(255,102,178,0.9)}
+    .prev {left:10px}
+    .next {right:10px}
+
+    h2 {text-align:center; margin-bottom:30px; color:#ff66b2; font-family:'Georgia', serif;}
+    .products {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px}
+    .card {background:#fff0f5; border-radius:15px; padding:15px; box-shadow:0 6px 12px rgba(255,102,178,0.2); transition:0.3s; text-align:center}
+    .card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(255,102,178,0.3)}
+    .card img {width:100%; border-radius:10px; margin-bottom:10px}
+    .price {font-weight:bold; margin:10px 0; color:#ff3385; font-size:1.2em}
+    button {background:#ff66b2; color:#fff; border:none; padding:10px 20px; cursor:pointer; border-radius:8px; font-weight:bold; transition:0.3s}
+    button:hover {background:#ff3385}
+
+    footer {background:#ff66b2; color:#fff; text-align:center; padding:15px; margin-top:40px; font-family:'Georgia', serif; font-weight:bold}
   </style>
 </head>
 <body>
+
   <header>
     <h1>Inox Style</h1>
     <nav>
@@ -30,19 +47,53 @@
   </header>
 
   <div class="container">
+    <div class="carousel">
+      <div class="slides">
+        <img src="https://via.placeholder.com/1200x400?text=Chaînes+en+acier+inoxydable" alt="Chaînes inox">
+        <img src="https://via.placeholder.com/1200x400?text=Bracelets+modernes" alt="Bracelets inox">
+        <img src="https://via.placeholder.com/1200x400?text=Accessoires+stylés" alt="Accessoires inox">
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+    </div>
+
     <h2>Nos accessoires en acier inoxydable</h2>
     <div class="products">
       <div class="card">
-        <img src="https://via.placeholder.com/300x300" alt="Chaîne inox" />
-        <h3>Chaîne classique</h3>
+        <img src="https://via.placeholder.com/300x300?text=Chaîne+Classique" alt="Chaîne classique" />
+        <h3>Chaîne Classique</h3>
         <p class="price">199 MAD</p>
-        <button>Commander</button>
+        <button onclick="window.open('https://wa.me/21628289052?text=Je+veux+commander+la+Chaîne+Classique','_blank')">Commander WhatsApp</button>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x300" alt="Bracelet inox" />
-        <h3>Bracelet moderne</h3>
+        <img src="https://via.placeholder.com/300x300?text=Bracelet+Moderne" alt="Bracelet moderne" />
+        <h3>Bracelet Moderne</h3>
         <p class="price">149 MAD</p>
-        <button>Commander</button>
+        <button onclick="window.open('https://wa.me/21628289052?text=Je+veux+commander+le+Bracelet+Moderne','_blank')">Commander WhatsApp</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x300?text=Chaîne+Élégante" alt="Chaîne élégante" />
+        <h3>Chaîne Élégante</h3>
+        <p class="price">229 MAD</p>
+        <button onclick="window.open('https://wa.me/21628289052?text=Je+veux+commander+la+Chaîne+Élégante','_blank')">Commander WhatsApp</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x300?text=Bracelet+Trendy" alt="Bracelet trendy" />
+        <h3>Bracelet Trendy</h3>
+        <p class="price">169 MAD</p>
+        <button onclick="window.open('https://wa.me/21628289052?text=Je+veux+commander+le+Bracelet+Trendy','_blank')">Commander WhatsApp</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x300?text=Chaîne+Stylée" alt="Chaîne stylée" />
+        <h3>Chaîne Stylée</h3>
+        <p class="price">249 MAD</p>
+        <button onclick="window.open('https://wa.me/21628289052?text=Je+veux+commander+la+Chaîne+Stylée','_blank')">Commander WhatsApp</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x300?text=Bracelet+Classique" alt="Bracelet classique" />
+        <h3>Bracelet Classique</h3>
+        <p class="price">139 MAD</p>
+        <button onclick="window.open('https://wa.me/21628289052?text=Je+veux+commander+le+Bracelet+Classique','_blank')">Commander WhatsApp</button>
       </div>
     </div>
   </div>
@@ -50,5 +101,25 @@
   <footer>
     <p>© 2026 Inox Style – Bijoux en acier inoxydable</p>
   </footer>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    let index = 0;
+
+    function showSlide(i){
+      if(i < 0) index = images.length -1;
+      else if(i >= images.length) index = 0;
+      else index = i;
+      slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+    }
+
+    prev.addEventListener('click', ()=> showSlide(index-1));
+    next.addEventListener('click', ()=> showSlide(index+1));
+    setInterval(()=> showSlide(index+1),5000);
+  </script>
+
 </body>
 </html>
